@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>result</title>
+	<link rel="stylesheet" href="../static/stylesheets/style1.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    	.centered {
+  			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+    </style>
+    <script type="text/javascript">
+     	$('#form').home(function() { 
+       	return true;
+     	});
+ 	</script>
+</head>
+<body>
+	<!-- <div class = "container"> -->
+		<!-- <div class="tab"> -->
+			<!-- <button class="tablinks" onclick="openCity(event, 'London')">Home</button> -->
+			
+		<!-- </div> -->
+		<img src="/static/loader5.gif" style="width:1550px;height:757px;border:0;">
+		<!-- <center> -->
+		<div class="centered">
+			<table border = 1>
+        		{% for key, value in name.items() %}
+            		<tr>
+              			<th> <font color="red"><h1 style="font-family: Comic Sans MS"><b><center>{{ key }}</center></b></h1></font> </th>
+               			<td> <font color="white"><h2 style="font-family: Comic Sans MS"><b><center>{{ value }}</center></b></h2></font> </td>
+            		</tr>
+         		{% endfor %}
+      		</table>
+          <br><br>
+  			<form action = "http://127.0.0.1:5000/" method = "get">
+				<button type="submit" onClick="home()" id = "home_button">home</button>
+			</form>
+  	</div>
+  	<!-- </div> -->
+</body>
+</html>

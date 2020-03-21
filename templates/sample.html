@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title>Analyze your Video</title>
+	<link rel="stylesheet" href="../static/stylesheets/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    	hr { 
+		  	display: block;
+		  	margin-top: 0.5em;
+		  	margin-bottom: 0.5em;
+		  	margin-left: auto;
+		  	margin-right: auto;
+		  	border-style: dashed;
+		  	border-width: 3.5px;
+		  	color: blue;
+		}
+    </style>
+</head>
+<body background="../static/Neg.gif" style="height: 100%; background-position: center; background-repeat: no-repeat; background-size: cover;">
+	<script type="text/javascript">
+     	$('#form').submit(function() {
+       		$('#gif').show();
+       		return true;
+     	});
+
+
+ 	</script>
+
+	<div class="bg">
+		<div class = "container">
+			<div class = "Review" id = "Review">
+				<!-- <div class="w3-bar w3-blue">
+			  		<a href="#" class="w3-bar-item w3-button">Home</a>
+			  		<a href="#" class="w3-bar-item w3-button">About</a>
+				</div> -->
+				<center><b><h1 style="font-family:jokerman;">Analyze your Video</h1></b></center>
+				<div class="form-group" id = "cover">
+					<form action = "http://127.0.0.1:5000/flask" method = "post" id = "form" >
+					
+						<!-- <label for="usr">Youtube link:</label>
+						<input type="text" class="form-control" placeholder="Enter Youtube link" name="link">
+						<br>
+						<p><input type = "submit" value="submit" /></p> -->
+						<div class="nm"><input type="text" placeholder="Enter Username" name="uname" required>
+						</div>
+						<hr>
+						<div class="tb">
+      						<div class="td"><input type="text" placeholder="Enter Youtube link" name ="link" required></div>
+      						<div class="td" id="s-cover">
+        						<button type="submit" onClick="$('#gif').css('visibility', 'visible');
+                    				$('#form').submit();">
+          							<div id="s-circle"></div>
+          							<span></span>
+        						</button>
+      						</div>
+    					</div>
+    					<img src="../static/emoji.gif" id="gif">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
